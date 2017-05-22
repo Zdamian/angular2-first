@@ -1,0 +1,8 @@
+
+<h1>Contacts</h1>
+
+<app-contacts-input
+  (contactAdded)="onContactAdded($event)"></app-contacts-input>
+
+<app-contacts-list
+  [contactsList]="contacts"></app-contacts-list>

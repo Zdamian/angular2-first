@@ -1,0 +1,8 @@
+<div>
+  <p>
+    <input #input type="text"
+      [(ngModel)]="note"
+      (keydown)="onKeydown($event)">
+    <button (click)="onClick()" >Dodaj</button>
+  </p>
+</div>

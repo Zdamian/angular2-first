@@ -1,0 +1,11 @@
+<div *ngIf="contactsList.length"
+  class="list-wrapper">
+  <h2>Lista kontaktów</h2>
+  <ul>
+    <li *ngFor="let contact of contactsList; let id = index"
+      [class.odd]="id % 2 === 0"
+      [ngClass]="{
+        'even': id % 2 !== 0
+      }">{{ contact }}</li>
+  </ul>
+</div>

@@ -12,7 +12,11 @@ import { NotesInputComponent } from './notes-input/notes-input.component';
     CommonModule,
     FormsModule
   ],
-  declarations: [ NotesComponent, NotesListComponent, NotesInputComponent ],
+  declarations: [
+    NotesComponent,
+    NotesListComponent,
+    NotesInputComponent
+  ],
   exports: [ NotesComponent ],
   providers: [ NoteService ]
 })

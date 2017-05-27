@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NotesComponent } from './notes/notes/notes.component';
 import { ContactsComponent } from './contacts/contacts/contacts.component';
+import { TodoComponent } from './todo/todo/todo.component';
+import { TaskComponent } from './task/task/task.component';
 
 
 const appRoutes: Routes = [
@@ -19,6 +21,14 @@ const appRoutes: Routes = [
     {
         path: 'contacts',
         component: ContactsComponent,
+    },
+    {
+        path: 'todo',
+        component: TodoComponent,
+    },
+    {
+        path: 'task',
+        component: TaskComponent,
     },
 ];
 

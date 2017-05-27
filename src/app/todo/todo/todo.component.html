@@ -1,0 +1,7 @@
+<h1>Todo</h1>
+
+<app-todo-input
+  (taskAdded)="onTaskAdded($event)"></app-todo-input>
+
+<app-todo-list
+  [todoList]="todo"></app-todo-list>

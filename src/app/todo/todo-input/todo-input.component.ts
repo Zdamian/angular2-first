@@ -10,20 +10,20 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-contacts-input',
-  templateUrl: './contacts-input.component.html',
-  styleUrls: ['./contacts-input.component.scss']
+  selector: 'app-todo-input',
+  templateUrl: './todo-input.component.html',
+  styleUrls: ['./todo-input.component.scss']
 })
-export class ContactsInputComponent implements OnInit, AfterViewInit {
+export class TodoInputComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  contact: string;
+  task: string;
 
-  @Output() contactAdded: EventEmitter<string> = new EventEmitter<string>();
+  @Output() taskAdded: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('input') input: ElementRef;
 
   constructor() {
-    this.contact = '';
+    this.task = '';
   }
 
   ngOnInit() {
@@ -38,16 +38,16 @@ export class ContactsInputComponent implements OnInit, AfterViewInit {
   }
 
   onClick() {
-    this.contactAdded.emit(this.contact);
-    this.contact = '';
+    this.taskAdded.emit(this.task);
+    this.task = '';
     this.input.nativeElement.focus();
   }
 
   onKeydown(e: KeyboardEvent) {
 
     if (e.keyCode === 13) {
-      this.contactAdded.emit(this.contact);
-      this.contact = '';
+      this.taskAdded.emit(this.task);
+      this.task = '';
       this.input.nativeElement.focus();
     }
   }

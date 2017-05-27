@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
 import { NotesModule } from './notes/notes.module';
 import { ContactsModule } from './contacts/contacts.module';
+import { TodoModule } from './todo/todo.module';
+import { TaskModule } from './task/task.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,9 @@ import { ContactsModule } from './contacts/contacts.module';
 
     MenuModule,
     NotesModule,
-    ContactsModule
+    ContactsModule,
+    TodoModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<div>
+  <ul>
+    <li *ngFor="let message of mail.messages">{{message.text}}</li>
+  </ul>
+</div>
+<div *ngFor="let message of mail.messages">
+  <input  
+  #myInput 
+  type="text"
+  [ngClass]="{mousedown:isMousedown}"
+  (mousedown)="isMousedown = true"
+  (mouseup)="isMousedown = false"
+  (mouseleave)="isMousedown = false"
+  >
+  <button class="white bg-black code" (click)='onClick(myInput.value)'>Click Me</button>
+</div>

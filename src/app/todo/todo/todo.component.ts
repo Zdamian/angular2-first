@@ -14,7 +14,7 @@ interface Task {
 })
 export class TodoComponent implements OnInit {
 
-  todo: string[];
+  todo: object[];
 
   constructor(private todoService: TodoService) {
     console.log('task component constructor');
@@ -25,6 +25,10 @@ export class TodoComponent implements OnInit {
   }
 
   onTaskAdded(task: string): void {
-    this.todo.push(task);
+    const newTodo: Task = {
+    done: false,
+    task: task
+  };
+    this.todo.push(newTodo);
   }
 }

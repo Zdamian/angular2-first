@@ -12,6 +12,11 @@ import { NotesModule } from './notes/notes.module';
 import { ContactsModule } from './contacts/contacts.module';
 import { TodoModule } from './todo/todo.module';
 import { TaskModule } from './task/task.module';
+import { TaskTwoModule } from './task-two/task-two.module';
+import { TaskThreeModule } from './task-three/task-three.module';
+
+import { TaskTwoService } from './task-two/shared/task-two.service';
+import { TaskThreeService } from './task-three/shared/task-three.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +34,13 @@ import { TaskModule } from './task/task.module';
     NotesModule,
     ContactsModule,
     TodoModule,
-    TaskModule
+    TaskModule,
+    TaskTwoModule,
+    TaskThreeModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'mail', useClass: TaskTwoService},
+    {provide: 'sms', useClass: TaskThreeService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

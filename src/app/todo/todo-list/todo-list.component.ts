@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  @Input() todoList: string[] =  [];
+  @Input() todoList: object[] =  [];
 
   constructor() {
   }

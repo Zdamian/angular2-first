@@ -3,18 +3,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TodoService {
 
-  private todo: string[];
+  private todo: object[];
 
   constructor() {
     this.todo = [];
-    console.log('notes service constructor');
   }
 
-  pushTask(task: string): void {
-    this.todo.push(task);
+  pushTask(Task: object): void {
+    this.todo.push(Task);
   }
 
-  getTodo(): string[] {
+  getTodo(): object[] {
     return this.todo;
   }
 
